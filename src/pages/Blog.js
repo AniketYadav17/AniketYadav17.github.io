@@ -298,16 +298,6 @@ const Blog = ({ darkMode }) => {
             Visit My Blog
           </a>
         </div>
-
-        <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mt-8">
-          <Link
-            to="/contact"
-            className="group relative inline-flex items-center px-8 py-4 rounded-xl font-semibold text-white bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
-          >
-            <ArrowTopRightOnSquareIcon className="h-5 w-5 mr-2 group-hover:animate-bounce" />
-            Get in Touch
-          </Link>
-        </div>
       </div>
     </div>
   );
