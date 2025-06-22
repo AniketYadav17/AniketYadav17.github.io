@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowDownTrayIcon, SparklesIcon } from '@heroicons/react/24/outline';
+import { Link } from 'react-router-dom';
 
 const Home = ({ darkMode }) => {
   return (
@@ -92,8 +93,8 @@ const Home = ({ darkMode }) => {
               Download Resume
             </a>
             
-            <a
-              href="/projects"
+            <Link
+              to="/projects"
               className={`group relative inline-flex items-center px-8 py-4 rounded-xl font-semibold border-2 transition-all duration-300 hover:scale-105 ${
                 darkMode
                   ? 'border-white/20 text-white hover:bg-white/10 backdrop-blur-md'
@@ -102,7 +103,7 @@ const Home = ({ darkMode }) => {
             >
               View Projects
               <div className="ml-2 w-2 h-2 rounded-full bg-blue-500 group-hover:animate-pulse"></div>
-            </a>
+            </Link>
           </div>
         </div>
       </section>
