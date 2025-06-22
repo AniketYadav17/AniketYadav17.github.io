@@ -33,7 +33,7 @@ const Home = ({ darkMode }) => {
           <div className="flex flex-col md:flex-row items-center justify-center gap-8 mb-8">
             {/* Profile Photo */}
             <div className="relative">
-              <div className={`w-64 h-40 md:w-80 md:h-48 rounded-2xl overflow-hidden border-4 shadow-2xl ${
+              <div className={`w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden border-4 shadow-2xl ${
                 darkMode ? 'border-white/20' : 'border-gray-200'
               }`}>
                 <img
@@ -44,7 +44,7 @@ const Home = ({ darkMode }) => {
                 />
               </div>
               {/* Glow effect */}
-              <div className={`absolute inset-0 rounded-2xl blur-xl opacity-30 ${
+              <div className={`absolute inset-0 rounded-full blur-xl opacity-30 ${
                 darkMode ? 'bg-blue-500' : 'bg-blue-400'
               }`}></div>
             </div>
