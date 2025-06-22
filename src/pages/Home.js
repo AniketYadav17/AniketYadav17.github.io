@@ -37,7 +37,7 @@ const Home = ({ darkMode }) => {
                 darkMode ? 'border-white/20' : 'border-gray-200'
               }`}>
                 <img
-                  src="/profile.jpg"
+                  src="/profile.png"
                   alt="Aniket Nair"
                   className="w-full h-full object-cover"
                   loading="eager"
