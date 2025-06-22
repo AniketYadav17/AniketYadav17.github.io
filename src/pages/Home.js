@@ -29,6 +29,23 @@ const Home = ({ darkMode }) => {
             </span>
           </div>
 
+          {/* Profile Photo */}
+          <div className="flex justify-center mb-8">
+            <div className={`relative w-32 h-32 rounded-full overflow-hidden border-4 ${
+              darkMode ? 'border-white/20' : 'border-gray-200'
+            } shadow-2xl`}>
+              <img
+                src="/profile.jpg"
+                alt="Aniket Nair"
+                className="w-full h-full object-cover"
+                onError={(e) => {
+                  // Hide the image if it doesn't exist
+                  e.target.style.display = 'none';
+                }}
+              />
+            </div>
+          </div>
+
           {/* Main Heading */}
           <h1 className={`text-6xl md:text-8xl font-bold mb-6 ${
             darkMode ? 'text-white' : 'text-gray-900'
