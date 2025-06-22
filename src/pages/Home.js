@@ -43,10 +43,6 @@ const Home = ({ darkMode }) => {
                   loading="eager"
                 />
               </div>
-              {/* Glow effect */}
-              <div className={`absolute inset-0 rounded-full blur-xl opacity-30 ${
-                darkMode ? 'bg-blue-500' : 'bg-blue-400'
-              }`}></div>
             </div>
 
             {/* Name and Title */}
