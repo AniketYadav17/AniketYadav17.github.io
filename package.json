@@ -27,7 +27,10 @@
     "extends": [
       "react-app",
       "react-app/jest"
-    ]
+    ],
+    "rules": {
+      "no-template-curly-in-string": "off"
+    }
   },
   "browserslist": {
     "production": [
@@ -46,5 +49,5 @@
     "postcss": "^8.5.6",
     "tailwindcss": "^3.4.17"
   },
-  "homepage": "https://github.com/AniketYadav17/my-portfolio.git"
+  "homepage": "https://aniketyadav17.github.io/my-portfolio"
 }
