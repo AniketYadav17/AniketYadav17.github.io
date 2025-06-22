@@ -41,7 +41,6 @@ const Home = ({ darkMode }) => {
                   alt="Aniket Nair"
                   className="w-full h-full object-cover"
                   style={{
-                    imageRendering: 'auto',
                     imageRendering: '-webkit-optimize-contrast'
                   }}
                   loading="eager"
