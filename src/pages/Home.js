@@ -18,7 +18,7 @@ const Home = ({ darkMode }) => {
 
         <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           {/* Badge */}
-          <div className="inline-flex items-center px-4 py-2 rounded-full mb-12 ${
+          <div className="inline-flex items-center px-4 py-2 rounded-full mb-8 ${
             darkMode ? 'bg-white/10 backdrop-blur-md border border-white/20' : 'bg-black/5 backdrop-blur-md border border-black/10'
           }">
             <SparklesIcon className="h-4 w-4 mr-2 text-blue-500" />
@@ -29,53 +29,42 @@ const Home = ({ darkMode }) => {
             </span>
           </div>
 
-          {/* Profile Photo with Enhanced Design */}
-          <div className="flex justify-center mb-12">
-            <div className="relative group">
-              {/* Gradient Border */}
-              <div className={`absolute inset-0 rounded-full bg-gradient-to-r from-blue-500 via-purple-500 to-blue-500 p-1 ${
-                darkMode ? 'shadow-2xl shadow-blue-500/25' : 'shadow-2xl'
+          {/* Profile Photo and Name Section */}
+          <div className="flex flex-col md:flex-row items-center justify-center gap-8 mb-8">
+            {/* Profile Photo */}
+            <div className="relative">
+              <div className={`w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden border-4 shadow-2xl ${
+                darkMode ? 'border-white/20' : 'border-gray-200'
               }`}>
-                <div className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-full p-1">
-                  <div className="w-40 h-40 rounded-full overflow-hidden">
-                    <img
-                      src="/profile.jpg"
-                      alt="Aniket Nair"
-                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
-                      onError={(e) => {
-                        // Hide the image if it doesn't exist
-                        e.target.style.display = 'none';
-                      }}
-                    />
-                  </div>
-                </div>
+                <img
+                  src="/profile.jpg"
+                  alt="Aniket Nair"
+                  className="w-full h-full object-cover"
+                />
               </div>
-              
-              {/* Floating Elements */}
-              <div className={`absolute -top-2 -right-2 w-6 h-6 rounded-full bg-gradient-to-r from-green-400 to-emerald-500 ${
-                darkMode ? 'shadow-lg shadow-green-500/50' : 'shadow-lg'
-              }`}></div>
-              <div className={`absolute -bottom-2 -left-2 w-4 h-4 rounded-full bg-gradient-to-r from-pink-400 to-rose-500 ${
-                darkMode ? 'shadow-lg shadow-pink-500/50' : 'shadow-lg'
+              {/* Glow effect */}
+              <div className={`absolute inset-0 rounded-full blur-xl opacity-30 ${
+                darkMode ? 'bg-blue-500' : 'bg-blue-400'
               }`}></div>
             </div>
+
+            {/* Name and Title */}
+            <div className="text-center md:text-left">
+              <h1 className={`text-5xl md:text-7xl font-bold mb-4 ${
+                darkMode ? 'text-white' : 'text-gray-900'
+              }`}>
+                <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 bg-clip-text text-transparent">
+                  Aniket Nair
+                </span>
+              </h1>
+              
+              <h2 className={`text-xl md:text-3xl font-medium ${
+                darkMode ? 'text-gray-300' : 'text-gray-600'
+              }`}>
+                Data Scientist & AI Enthusiast
+              </h2>
+            </div>
           </div>
-
-          {/* Main Heading */}
-          <h1 className={`text-6xl md:text-8xl font-bold mb-6 ${
-            darkMode ? 'text-white' : 'text-gray-900'
-          }`}>
-            <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 bg-clip-text text-transparent">
-              Aniket Nair
-            </span>
-          </h1>
-
-          {/* Subtitle */}
-          <h2 className={`text-2xl md:text-4xl font-medium mb-8 ${
-            darkMode ? 'text-gray-300' : 'text-gray-600'
-          }`}>
-            Data Scientist & AI Enthusiast
-          </h2>
 
           {/* Introduction */}
           <div className="max-w-4xl mx-auto space-y-6 mb-12">
