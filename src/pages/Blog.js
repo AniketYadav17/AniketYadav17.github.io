@@ -286,7 +286,7 @@ const Blog = ({ darkMode }) => {
             darkMode ? 'text-gray-300' : 'text-gray-600'
           }`}>
             Follow my blog for the latest insights on data science, machine learning, 
-            and artificial intelligence. New articles every week!
+            and artificial intelligence.
           </p>
           <a
             href="https://yourusername.hashnode.dev"

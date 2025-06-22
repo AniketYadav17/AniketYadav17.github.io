@@ -45,7 +45,7 @@ const Navbar = ({ darkMode }) => {
               <div className={`text-xl font-bold transition-colors duration-300 ${
                 darkMode ? 'text-white' : 'text-gray-900'
               }`}>
-                Aniket Nair
+                Aniket Yadav
               </div>
               <div className={`text-sm transition-colors duration-300 ${
                 darkMode ? 'text-gray-400' : 'text-gray-600'
