@@ -1,6 +1,5 @@
 import React from 'react';
-import { EnvelopeIcon, LinkIcon, ChatBubbleLeftRightIcon, UserIcon, PaperAirplaneIcon } from '@heroicons/react/24/outline';
-import { Link } from 'react-router-dom';
+import { EnvelopeIcon, LinkIcon, ChatBubbleLeftRightIcon, UserIcon } from '@heroicons/react/24/outline';
 
 const Contact = ({ darkMode }) => {
   const contactInfo = [
