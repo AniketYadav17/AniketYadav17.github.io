@@ -202,24 +202,13 @@ const Contact = ({ darkMode }) => {
             new opportunities and interesting projects.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mt-8">
-            <Link
-              to="/projects"
-              className={`group relative inline-flex items-center px-8 py-4 rounded-xl font-semibold border-2 transition-all duration-300 hover:scale-105 ${
-                darkMode
-                  ? 'border-white/20 text-white hover:bg-white/10 backdrop-blur-md'
-                  : 'border-gray-300 text-gray-700 hover:bg-gray-50'
-              }`}
+            <a
+              href="mailto:aniket.ydv99@gmail.com"
+              className="inline-flex items-center gap-3 px-8 py-4 rounded-xl font-semibold text-white bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
             >
-              View Projects
-              <div className="ml-2 w-2 h-2 rounded-full bg-blue-500 group-hover:animate-pulse"></div>
-            </Link>
-            <Link
-              to="/contact"
-              className="group relative inline-flex items-center px-8 py-4 rounded-xl font-semibold text-white bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
-            >
-              <PaperAirplaneIcon className="h-5 w-5 mr-2 group-hover:animate-bounce" />
-              Get in Touch
-            </Link>
+              <EnvelopeIcon className="h-5 w-5" />
+              Send Me an Email
+            </a>
           </div>
         </div>
       </div>
