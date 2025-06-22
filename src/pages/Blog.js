@@ -1,6 +1,5 @@
 import React from 'react';
 import { ArrowTopRightOnSquareIcon, CalendarIcon, ClockIcon, BookOpenIcon } from '@heroicons/react/24/outline';
-import { Link } from 'react-router-dom';
 
 const Blog = ({ darkMode }) => {
   const blogPosts = [
