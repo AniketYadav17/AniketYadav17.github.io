@@ -38,7 +38,7 @@ const Home = ({ darkMode }) => {
               }`}>
                 <img
                   src="/profile.png"
-                  alt="Aniket Nair"
+                  alt="Aniket Yadav"
                   className="w-full h-full object-cover"
                   loading="eager"
                 />
@@ -55,7 +55,7 @@ const Home = ({ darkMode }) => {
                 darkMode ? 'text-white' : 'text-gray-900'
               }`}>
                 <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 bg-clip-text text-transparent">
-                  Aniket Nair
+                  Aniket Yadav
                 </span>
               </h1>
               
@@ -72,7 +72,7 @@ const Home = ({ darkMode }) => {
             <p className={`text-xl md:text-2xl leading-relaxed ${
               darkMode ? 'text-gray-300' : 'text-gray-700'
             }`}>
-              I'm currently pursuing an MSc in Artificial Intelligence at the University of Sutu, 
+              I'm currently pursuing an MSc in Artificial Intelligence at the University of Surrey, 
               with 2.5 years of experience as a software engineer at Accenture.
             </p>
             

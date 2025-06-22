@@ -5,8 +5,8 @@ const Contact = ({ darkMode }) => {
   const contactInfo = [
     {
       name: 'Email',
-      value: 'your.email@example.com',
-      href: 'mailto:your.email@example.com',
+      value: 'aniket.ydv99@gmail.com',
+      href: 'mailto:aniket.ydv99@gmail.com',
       icon: '📧',
       description: 'Send me an email for collaborations, opportunities, or just to say hello!',
       gradient: 'from-blue-500 to-cyan-500',
@@ -14,8 +14,8 @@ const Contact = ({ darkMode }) => {
     },
     {
       name: 'LinkedIn',
-      value: 'linkedin.com/in/yourusername',
-      href: 'https://linkedin.com/in/yourusername',
+      value: 'linkedin.com/in/aniket-ydv/',
+      href: 'https://linkedin.com/in/aniket-ydv/',
       icon: '💼',
       description: 'Connect with me on LinkedIn for professional networking and updates.',
       gradient: 'from-purple-500 to-pink-500',
@@ -23,8 +23,8 @@ const Contact = ({ darkMode }) => {
     },
     {
       name: 'GitHub',
-      value: 'github.com/yourusername',
-      href: 'https://github.com/yourusername',
+      value: 'github.com/AniketYadav17',
+      href: 'https://github.com/AniketYadav17',
       icon: '🐙',
       description: 'Check out my open-source projects and contributions on GitHub.',
       gradient: 'from-green-500 to-emerald-500',
@@ -201,7 +201,7 @@ const Contact = ({ darkMode }) => {
             new opportunities and interesting projects.
           </p>
           <a
-            href="mailto:your.email@example.com"
+            href="mailto:aniket.ydv99@gmail.com"
             className="inline-flex items-center gap-3 px-8 py-4 rounded-xl font-semibold text-white bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
           >
             <EnvelopeIcon className="h-5 w-5" />
