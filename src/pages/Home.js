@@ -40,6 +40,11 @@ const Home = ({ darkMode }) => {
                   src="/profile.jpg"
                   alt="Aniket Nair"
                   className="w-full h-full object-cover"
+                  style={{
+                    imageRendering: 'auto',
+                    imageRendering: '-webkit-optimize-contrast'
+                  }}
+                  loading="eager"
                 />
               </div>
               {/* Glow effect */}
