@@ -22,3 +22,8 @@ test('renders footer with GitHub, LinkedIn and Email links', () => {
     'mailto:aniket.ydv99@gmail.com'
   );
 });
+
+test('navbar contains a dark mode toggle', () => {
+  render(<App />);
+  expect(screen.getAllByLabelText('Toggle dark mode').length).toBeGreaterThan(0);
+});
