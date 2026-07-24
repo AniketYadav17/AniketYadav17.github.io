@@ -1,62 +1,40 @@
 import React from 'react';
-import './Footer.css';
 
-const Footer = () => {
-  const currentYear = new Date().getFullYear();
-
-  const scrollToSection = (sectionId) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
+const Footer = ({ darkMode }) => {
+  const linkClass = `transition-colors ${
+    darkMode ? 'hover:text-indigo-400' : 'hover:text-indigo-600'
+  }`;
 
   return (
-    <footer className="footer">
-      <div className="footer-content">
-        <div className="container">
-          <div className="footer-main">
-            <div className="footer-brand">
-              <h3>Your Name</h3>
-              <p>Data Scientist & ML Engineer</p>
-              <p className="footer-description">
-                Transforming data into actionable insights and building intelligent 
-                solutions that drive business value.
-              </p>
-            </div>
-
-            <div className="footer-links">
-              <div className="footer-section">
-                <h4>Quick Links</h4>
-                <ul>
-                  <li><button onClick={() => scrollToSection('about')} className="footer-link-btn">About</button></li>
-                  <li><button onClick={() => scrollToSection('skills')} className="footer-link-btn">Skills</button></li>
-                  <li><button onClick={() => scrollToSection('projects')} className="footer-link-btn">Projects</button></li>
-                  <li><button onClick={() => scrollToSection('blog')} className="footer-link-btn">Blog</button></li>
-                  <li><button onClick={() => scrollToSection('contact')} className="footer-link-btn">Contact</button></li>
-                </ul>
-              </div>
-
-              <div className="footer-section">
-                <h4>Connect</h4>
-                <ul>
-                  <li><a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-                  <li><a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-                  <li><a href="https://twitter.com/yourusername" target="_blank" rel="noopener noreferrer">Twitter</a></li>
-                  <li><a href="https://medium.com/@yourusername" target="_blank" rel="noopener noreferrer">Medium</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div className="footer-bottom">
-            <p>&copy; {currentYear} Your Name. All rights reserved.</p>
-            <p>Built with ❤️ using React</p>
-          </div>
+    <footer className={`border-t ${darkMode ? 'border-gray-800' : 'border-gray-200'}`}>
+      <div className={`max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm ${
+        darkMode ? 'text-gray-400' : 'text-gray-500'
+      }`}>
+        <span>© {new Date().getFullYear()} Aniket Yadav</span>
+        <div className="flex items-center gap-6">
+          <a
+            href="https://github.com/AniketYadav17"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={linkClass}
+          >
+            GitHub
+          </a>
+          <a
+            href="https://linkedin.com/in/aniket-ydv/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={linkClass}
+          >
+            LinkedIn
+          </a>
+          <a href="mailto:aniket.ydv99@gmail.com" className={linkClass}>
+            Email
+          </a>
         </div>
       </div>
     </footer>
   );
 };
 
-export default Footer; 
+export default Footer;
