@@ -16,7 +16,7 @@ const Projects = ({ darkMode }) => {
     {
       category: 'ML + Geospatial',
       title: 'Neighbourhood Pulse — London Property Intelligence',
-      description: 'Gentrification and valuation-gap predictor for London. Ingests 350,000+ planning applications and 500,000+ property sales across all 33 boroughs via a reverse-engineered Elasticsearch API, scores every neighbourhood\'s valuation gap with an XGBoost model validated by a three-year backtest (flagged-undervalued areas grew +7.3% vs −1.5% for overvalued), and serves grounded, schema-enforced LLM briefs on a live Streamlit map backed by a Dockerised FastAPI service.',
+      description: 'Gentrification and valuation-gap predictor for London. Ingests 350,000+ planning applications and 500,000+ property sales across all 33 boroughs via a reverse-engineered Elasticsearch API, scores every neighbourhood\u2019s valuation gap with an XGBoost model validated by a three-year backtest (flagged-undervalued areas grew +7.3% vs −1.5% for overvalued), and serves grounded, schema-enforced LLM briefs on a live Streamlit map backed by a Dockerised FastAPI service.',
       techStack: ['Python', 'XGBoost', 'Gemini API', 'FastAPI', 'Streamlit', 'Docker'],
       github: 'https://github.com/AniketYadav17/Neighbourhood-Pulse',
       demo: 'https://neighbourhood-pulse.streamlit.app',
