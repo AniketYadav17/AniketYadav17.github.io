@@ -8,7 +8,7 @@ const Footer = ({ darkMode }) => {
   return (
     <footer className={`border-t ${darkMode ? 'border-gray-800' : 'border-gray-200'}`}>
       <div className={`max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm ${
-        darkMode ? 'text-gray-400' : 'text-gray-500'
+        darkMode ? 'text-gray-400' : 'text-gray-600'
       }`}>
         <span>© {new Date().getFullYear()} Aniket Yadav</span>
         <div className="flex items-center gap-6">
