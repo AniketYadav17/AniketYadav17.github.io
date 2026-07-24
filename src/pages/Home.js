@@ -1,115 +1,71 @@
 import React from 'react';
-import { ArrowDownTrayIcon, SparklesIcon } from '@heroicons/react/24/outline';
+import { ArrowDownTrayIcon } from '@heroicons/react/24/outline';
 import { Link } from 'react-router-dom';
 
 const Home = ({ darkMode }) => {
+  const accent = darkMode ? 'text-indigo-400' : 'text-indigo-600';
+  const secondary = darkMode ? 'text-gray-300' : 'text-gray-700';
+  const muted = darkMode ? 'text-gray-400' : 'text-gray-600';
+
   return (
-    <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Background Elements */}
-        <div className="absolute inset-0">
-          <div className={`absolute top-20 left-10 w-72 h-72 rounded-full blur-3xl opacity-20 ${
-            darkMode ? 'bg-blue-500' : 'bg-blue-400'
-          }`}></div>
-          <div className={`absolute bottom-20 right-10 w-96 h-96 rounded-full blur-3xl opacity-20 ${
-            darkMode ? 'bg-purple-500' : 'bg-purple-400'
-          }`}></div>
-        </div>
-
-        <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          {/* Badge */}
-          <div className="inline-flex items-center px-4 py-2 rounded-full mb-8 ${
-            darkMode ? 'bg-white/10 backdrop-blur-md border border-white/20' : 'bg-black/5 backdrop-blur-md border border-black/10'
-          }">
-            <SparklesIcon className="h-4 w-4 mr-2 text-blue-500" />
-            <span className={`text-sm font-medium ${
-              darkMode ? 'text-gray-300' : 'text-gray-700'
-            }`}>
+    <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="min-h-[calc(100vh-5rem)] flex items-center py-16">
+        <div className="w-full flex flex-col-reverse items-center gap-10 md:flex-row md:justify-between">
+          <div className="max-w-2xl text-center md:text-left">
+            <div className={`inline-flex items-center gap-2 text-sm font-medium ${muted}`}>
+              <span className="w-2 h-2 rounded-full bg-emerald-500"></span>
               Available for opportunities
-            </span>
-          </div>
-
-          {/* Profile Photo and Name Section */}
-          <div className="flex flex-col md:flex-row items-center justify-center gap-8 mb-8">
-            {/* Profile Photo */}
-            <div className="relative">
-              <div className={`w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden border-4 shadow-2xl ${
-                darkMode ? 'border-white/20' : 'border-gray-200'
-              }`}>
-                <img
-                  src="/profile.png"
-                  alt="Aniket Yadav"
-                  className="w-full h-full object-cover"
-                  loading="eager"
-                />
-              </div>
             </div>
 
-            {/* Name and Title */}
-            <div className="text-center md:text-left">
-              <h1 className={`text-5xl md:text-7xl font-bold mb-4 ${
-                darkMode ? 'text-white' : 'text-gray-900'
-              }`}>
-                <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 bg-clip-text text-transparent">
-                  Aniket Yadav
-                </span>
-              </h1>
-              
-              <h2 className={`text-xl md:text-3xl font-medium ${
-                darkMode ? 'text-gray-300' : 'text-gray-600'
-              }`}>
-                AI Engineer · Agentic AI · RAG · LLM Evaluation
-              </h2>
-            </div>
-          </div>
-
-          {/* Introduction */}
-          <div className="max-w-4xl mx-auto space-y-6 mb-12">
-            <p className={`text-xl md:text-2xl leading-relaxed ${
-              darkMode ? 'text-gray-300' : 'text-gray-700'
+            <h1 className={`mt-4 text-4xl sm:text-5xl font-bold tracking-tight ${
+              darkMode ? 'text-white' : 'text-gray-900'
             }`}>
+              Aniket Yadav
+            </h1>
+
+            <h2 className={`mt-3 text-lg sm:text-xl font-medium ${accent}`}>
+              AI Engineer · Agentic AI · RAG · LLM Evaluation
+            </h2>
+
+            <p className={`mt-6 text-lg leading-relaxed ${secondary}`}>
               AI Engineer with 2+ years shipping production AI systems in Python.
               MSc in Artificial Intelligence (Distinction) from the University of Surrey,
               previously Machine Learning Engineer at Accenture.
             </p>
 
-            <p className={`text-lg md:text-xl leading-relaxed ${
-              darkMode ? 'text-gray-400' : 'text-gray-600'
-            }`}>
+            <p className={`mt-4 leading-relaxed ${muted}`}>
               I build agentic LLM workflows with LangGraph, retrieval-augmented pipelines
               over enterprise data, and the evaluation harnesses that prove these systems
               can be trusted in production.
             </p>
+
+            <div className="mt-8 flex flex-col sm:flex-row items-center justify-center md:justify-start gap-5">
+              <a
+                href="/resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-semibold text-white bg-indigo-600 hover:bg-indigo-500 transition-colors"
+              >
+                <ArrowDownTrayIcon className="h-5 w-5" />
+                Download resume
+              </a>
+              <Link to="/projects" className={`font-medium ${accent} hover:underline`}>
+                View projects →
+              </Link>
+            </div>
           </div>
 
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-            <a
-              href="/resume.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group relative inline-flex items-center px-8 py-4 rounded-xl font-semibold text-white bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
-            >
-              <ArrowDownTrayIcon className="h-5 w-5 mr-2 group-hover:animate-bounce" />
-              Download Resume
-            </a>
-            
-            <Link
-              to="/projects"
-              className={`group relative inline-flex items-center px-8 py-4 rounded-xl font-semibold border-2 transition-all duration-300 hover:scale-105 ${
-                darkMode
-                  ? 'border-white/20 text-white hover:bg-white/10 backdrop-blur-md'
-                  : 'border-gray-300 text-gray-700 hover:bg-gray-50'
-              }`}
-            >
-              View Projects
-              <div className="ml-2 w-2 h-2 rounded-full bg-blue-500 group-hover:animate-pulse"></div>
-            </Link>
-          </div>
+          <img
+            src="/profile.png"
+            alt="Aniket Yadav"
+            loading="eager"
+            className={`w-40 h-40 md:w-48 md:h-48 rounded-full object-cover ring-1 ${
+              darkMode ? 'ring-gray-800' : 'ring-gray-200'
+            }`}
+          />
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
   );
 };
 
