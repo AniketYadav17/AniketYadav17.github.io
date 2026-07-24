@@ -1,219 +1,113 @@
 import React from 'react';
-import { EnvelopeIcon, LinkIcon, ChatBubbleLeftRightIcon, UserIcon } from '@heroicons/react/24/outline';
+import {
+  EnvelopeIcon,
+  BriefcaseIcon,
+  CodeBracketIcon,
+  AcademicCapIcon,
+} from '@heroicons/react/24/outline';
 
 const Contact = ({ darkMode }) => {
+  const accent = darkMode ? 'text-indigo-400' : 'text-indigo-600';
+  const border = darkMode ? 'border-gray-800' : 'border-gray-200';
+  const secondary = darkMode ? 'text-gray-300' : 'text-gray-600';
+  const heading = darkMode ? 'text-white' : 'text-gray-900';
+
   const contactInfo = [
     {
       name: 'Email',
-      value: 'aniket.ydv99@gmail.com',
       href: 'mailto:aniket.ydv99@gmail.com',
-      icon: '📧',
+      Icon: EnvelopeIcon,
       description: 'Send me an email for collaborations, opportunities, or just to say hello!',
-      gradient: 'from-blue-500 to-cyan-500',
-      color: 'blue'
+      cta: 'Send an email →',
     },
     {
       name: 'LinkedIn',
-      value: 'linkedin.com/in/aniket-ydv/',
       href: 'https://linkedin.com/in/aniket-ydv/',
-      icon: '💼',
+      Icon: BriefcaseIcon,
       description: 'Connect with me on LinkedIn for professional networking and updates.',
-      gradient: 'from-purple-500 to-pink-500',
-      color: 'purple'
+      cta: 'Visit LinkedIn →',
     },
     {
       name: 'GitHub',
-      value: 'github.com/AniketYadav17',
       href: 'https://github.com/AniketYadav17',
-      icon: '🐙',
+      Icon: CodeBracketIcon,
       description: 'Check out my open-source projects and contributions on GitHub.',
-      gradient: 'from-green-500 to-emerald-500',
-      color: 'green'
-    }
+      cta: 'Visit GitHub →',
+    },
   ];
 
   return (
-    <div className="min-h-screen py-20">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center px-4 py-2 rounded-full mb-6 ${
-            darkMode ? 'bg-white/10 backdrop-blur-md border border-white/20' : 'bg-black/5 backdrop-blur-md border border-black/10'
-          }">
-            <ChatBubbleLeftRightIcon className="h-4 w-4 mr-2 text-blue-500" />
-            <span className={`text-sm font-medium ${
-              darkMode ? 'text-gray-300' : 'text-gray-700'
-            }`}>
-              Let's Connect
-            </span>
-          </div>
-          
-          <h1 className={`text-5xl md:text-6xl font-bold mb-6 ${
-            darkMode ? 'text-white' : 'text-gray-900'
-          }`}>
-            Get In Touch
-          </h1>
-          <p className={`text-xl max-w-3xl mx-auto ${
-            darkMode ? 'text-gray-300' : 'text-gray-600'
-          }`}>
-            I'm always interested in new opportunities, collaborations, and interesting
-            conversations about agentic AI, RAG systems, and LLM evaluation.
-          </p>
-        </div>
+    <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <header className="mb-14">
+        <p className={`text-xs font-semibold tracking-widest uppercase ${accent}`}>Contact</p>
+        <h1 className={`mt-2 text-3xl sm:text-4xl font-bold tracking-tight ${heading}`}>
+          Get in touch
+        </h1>
+        <p className={`mt-4 max-w-2xl text-lg ${secondary}`}>
+          I'm always interested in new opportunities, collaborations, and interesting
+          conversations about agentic AI, RAG systems, and LLM evaluation.
+        </p>
+      </header>
 
-        {/* Contact Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-          {contactInfo.map((contact, index) => (
-            <div
-              key={index}
-              className={`group relative overflow-hidden rounded-2xl transition-all duration-500 hover:scale-105 ${
-                darkMode 
-                  ? 'bg-white/5 backdrop-blur-md border border-white/10 hover:bg-white/10' 
-                  : 'bg-white/50 backdrop-blur-md border border-gray-200/50 hover:bg-white/70 shadow-xl'
-              }`}
-            >
-              <div className="p-8 text-center">
-                {/* Icon */}
-                <div className={`w-16 h-16 mx-auto mb-6 rounded-2xl bg-gradient-to-br ${contact.gradient} flex items-center justify-center text-2xl shadow-lg`}>
-                  {contact.icon}
-                </div>
-                
-                {/* Contact Info */}
-                <h3 className={`text-2xl font-bold mb-3 ${
-                  darkMode ? 'text-white' : 'text-gray-900'
-                }`}>
-                  {contact.name}
-                </h3>
-                
-                <p className={`text-sm mb-6 leading-relaxed ${
-                  darkMode ? 'text-gray-300' : 'text-gray-600'
-                }`}>
-                  {contact.description}
-                </p>
-                
-                <a
-                  href={contact.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`inline-flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-medium transition-all duration-300 bg-gradient-to-r ${contact.gradient} text-white hover:shadow-lg`}
-                >
-                  {contact.name === 'Email' ? (
-                    <>
-                      <EnvelopeIcon className="h-4 w-4" />
-                      Send Email
-                    </>
-                  ) : (
-                    <>
-                      <LinkIcon className="h-4 w-4" />
-                      Visit {contact.name}
-                    </>
-                  )}
-                </a>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* About Section */}
-        <div className={`rounded-2xl p-12 mb-16 ${
-          darkMode 
-            ? 'bg-white/5 backdrop-blur-md border border-white/10' 
-            : 'bg-white/50 backdrop-blur-md border border-gray-200/50 shadow-xl'
-        }`}>
-          <div className="text-center mb-12">
-            <h2 className={`text-4xl font-bold mb-6 ${
-              darkMode ? 'text-white' : 'text-gray-900'
-            }`}>
-              Let's Work Together
-            </h2>
-            
-            <p className={`text-xl max-w-3xl mx-auto ${
-              darkMode ? 'text-gray-300' : 'text-gray-600'
-            }`}>
-              I hold an MSc in Artificial Intelligence (Distinction) from the University of
-              Surrey and I'm actively seeking AI engineering opportunities. Whether you have
-              a project in mind, want to discuss potential collaborations, or just want to
-              connect, I'd love to hear from you!
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className={`p-8 rounded-2xl ${
-              darkMode ? 'bg-white/5 border border-white/10' : 'bg-white/30 border border-gray-200/50'
-            }`}>
-              <div className="flex items-center mb-4">
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center mr-4">
-                  <UserIcon className="h-6 w-6 text-white" />
-                </div>
-                <h3 className={`text-xl font-bold ${
-                  darkMode ? 'text-white' : 'text-gray-900'
-                }`}>
-                  Current Status
-                </h3>
-              </div>
-              <div className={`space-y-2 ${
-                darkMode ? 'text-gray-300' : 'text-gray-600'
-              }`}>
-                <p className="font-medium">MSc in Artificial Intelligence — Distinction</p>
-                <p>University of Surrey (2024–2025)</p>
-                <p className="text-blue-500 font-semibold">Available for opportunities</p>
-              </div>
-            </div>
-            
-            <div className={`p-8 rounded-2xl ${
-              darkMode ? 'bg-white/5 border border-white/10' : 'bg-white/30 border border-gray-200/50'
-            }`}>
-              <div className="flex items-center mb-4">
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center mr-4">
-                  <ChatBubbleLeftRightIcon className="h-6 w-6 text-white" />
-                </div>
-                <h3 className={`text-xl font-bold ${
-                  darkMode ? 'text-white' : 'text-gray-900'
-                }`}>
-                  Experience
-                </h3>
-              </div>
-              <div className={`space-y-2 ${
-                darkMode ? 'text-gray-300' : 'text-gray-600'
-              }`}>
-                <p className="font-medium">2+ years shipping production AI systems</p>
-                <p>Independent AI Engineer · Ex-Accenture</p>
-                <p className="text-purple-500 font-semibold">Agentic AI · RAG · LLM Evaluation</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Quick Response */}
-        <div className={`text-center p-12 rounded-2xl ${
-          darkMode 
-            ? 'bg-white/5 backdrop-blur-md border border-white/10' 
-            : 'bg-white/50 backdrop-blur-md border border-gray-200/50 shadow-xl'
-        }`}>
-          <h3 className={`text-3xl font-bold mb-4 ${
-            darkMode ? 'text-white' : 'text-gray-900'
-          }`}>
-            Ready to Start a Conversation?
-          </h3>
-          <p className={`text-lg mb-8 max-w-2xl mx-auto ${
-            darkMode ? 'text-gray-300' : 'text-gray-600'
-          }`}>
-            I typically respond within 24 hours and I'm always excited to discuss 
-            new opportunities and interesting projects.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mt-8">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {contactInfo.map(({ name, href, Icon, description, cta }) => (
+          <div key={name} className={`rounded-xl border p-6 ${border}`}>
+            <Icon className={`h-6 w-6 ${accent}`} />
+            <h3 className={`mt-4 text-lg font-bold ${heading}`}>{name}</h3>
+            <p className={`mt-2 text-sm leading-relaxed ${secondary}`}>{description}</p>
             <a
-              href="mailto:aniket.ydv99@gmail.com"
-              className="inline-flex items-center gap-3 px-8 py-4 rounded-xl font-semibold text-white bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
+              href={href}
+              {...(href.startsWith('http')
+                ? { target: '_blank', rel: 'noopener noreferrer' }
+                : {})}
+              className={`mt-4 inline-block text-sm font-medium ${accent} hover:underline`}
             >
-              <EnvelopeIcon className="h-5 w-5" />
-              Send Me an Email
+              {cta}
             </a>
           </div>
+        ))}
+      </div>
+
+      <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className={`rounded-xl border p-6 ${border}`}>
+          <div className="flex items-center gap-3">
+            <AcademicCapIcon className={`h-6 w-6 ${accent}`} />
+            <h3 className={`text-lg font-bold ${heading}`}>Current status</h3>
+          </div>
+          <div className={`mt-4 space-y-1 text-sm ${secondary}`}>
+            <p className="font-medium">MSc in Artificial Intelligence — Distinction</p>
+            <p>University of Surrey (2024–2025)</p>
+            <p className={`font-semibold ${accent}`}>Available for opportunities</p>
+          </div>
         </div>
+
+        <div className={`rounded-xl border p-6 ${border}`}>
+          <div className="flex items-center gap-3">
+            <BriefcaseIcon className={`h-6 w-6 ${accent}`} />
+            <h3 className={`text-lg font-bold ${heading}`}>Experience</h3>
+          </div>
+          <div className={`mt-4 space-y-1 text-sm ${secondary}`}>
+            <p className="font-medium">2+ years shipping production AI systems</p>
+            <p>Independent AI Engineer · Ex-Accenture</p>
+            <p className={`font-semibold ${accent}`}>Agentic AI · RAG · LLM Evaluation</p>
+          </div>
+        </div>
+      </div>
+
+      <div className={`mt-16 pt-10 border-t text-center ${border}`}>
+        <p className={`text-lg ${secondary}`}>
+          Have a project in mind, or just want to connect?
+        </p>
+        <a
+          href="mailto:aniket.ydv99@gmail.com"
+          className="mt-5 inline-flex items-center gap-2 px-6 py-3 rounded-lg font-semibold text-white bg-indigo-600 hover:bg-indigo-500 transition-colors"
+        >
+          <EnvelopeIcon className="h-5 w-5" />
+          Send me an email
+        </a>
       </div>
     </div>
   );
 };
 
-export default Contact; 
+export default Contact;
