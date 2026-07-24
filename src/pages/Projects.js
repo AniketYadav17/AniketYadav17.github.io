@@ -5,17 +5,17 @@ const Projects = ({ darkMode }) => {
   const projects = [
     {
       category: 'Agentic RAG',
-      title: 'Sentinel — FCA Compliance Auditor',
+      title: 'Sentinel: FCA Compliance Auditor',
       description: 'Agentic compliance auditor for UK fintech marketing. A LangGraph agent decomposes copy into discrete claims, retrieves the FCA Handbook rules each claim may breach, and returns cited verdicts, routing low-confidence cases to human review. Built eval-first: a 199-claim golden dataset verified against the live FCA Handbook API gates every retrieval, prompt, and model change in CI, and the handbook search is published as an MCP server with prompt-injection defences.',
       techStack: ['Python', 'LangGraph', 'Hybrid RAG', 'Gemini', 'MCP', 'Evaluation-Gated CI'],
       github: null,
       demo: null,
-      note: 'Code private for now — walkthrough available on request',
+      note: 'Code private for now, walkthrough available on request',
       stats: { 'Verdict accuracy': '79%', 'False-flag rate': '4%', 'Recall@5 lift': '+25%' }
     },
     {
       category: 'ML + Geospatial',
-      title: 'Neighbourhood Pulse — London Property Intelligence',
+      title: 'Neighbourhood Pulse: London Property Intelligence',
       description: 'Gentrification and valuation-gap predictor for London. Ingests 350,000+ planning applications and 500,000+ property sales across all 33 boroughs via a reverse-engineered Elasticsearch API, scores every neighbourhood\u2019s valuation gap with an XGBoost model validated by a three-year backtest (flagged-undervalued areas grew +7.3% vs −1.5% for overvalued), and serves grounded, schema-enforced LLM briefs on a live Streamlit map backed by a Dockerised FastAPI service.',
       techStack: ['Python', 'XGBoost', 'Gemini API', 'FastAPI', 'Streamlit', 'Docker'],
       github: 'https://github.com/AniketYadav17/Neighbourhood-Pulse',
@@ -29,7 +29,7 @@ const Projects = ({ darkMode }) => {
       techStack: ['PyTorch', 'SegFormer', 'Vision Transformers', 'Multi-GPU Training'],
       github: null,
       demo: null,
-      note: 'MSc dissertation — thesis available on request',
+      note: 'MSc dissertation, thesis available on request',
       stats: { 'ROC-AUC': '0.97', 'Accuracy': '96%', 'Lesion F1': '0.86' }
     }
   ];
@@ -50,7 +50,7 @@ const Projects = ({ darkMode }) => {
         </h1>
         <p className={`mt-4 max-w-2xl text-lg ${secondary}`}>
           From problem framing and data acquisition through modelling, evaluation,
-          and deployment — with evaluation-gated CI as standard practice.
+          and deployment, with evaluation-gated CI as standard practice.
         </p>
       </header>
 

@@ -75,7 +75,7 @@ const Contact = ({ darkMode }) => {
             <h3 className={`text-lg font-bold ${heading}`}>Current status</h3>
           </div>
           <div className={`mt-4 space-y-1 text-sm ${secondary}`}>
-            <p className="font-medium">MSc in Artificial Intelligence — Distinction</p>
+            <p className="font-medium">MSc in Artificial Intelligence, Distinction</p>
             <p>University of Surrey (2024–2025)</p>
             <p className={`font-semibold ${accent}`}>Available for opportunities</p>
           </div>
