@@ -45,7 +45,7 @@ Gradient blobs, glassmorphism, gradient text, dotted background pattern, `animat
 - Responsive grid: 1 / 2 / 3 columns, equal-height cards. Bottom CTA block simplified to match the new language.
 
 ### Contact (`src/pages/Contact.js`)
-- Three bordered cards (Email / LinkedIn / GitHub): icon or label, one-line description, accent text link. No gradient buttons.
+- Three bordered cards (Email / LinkedIn / GitHub): a small outline Heroicon in accent colour (replacing the emoji icons), name, one-line description, accent text link. No gradient buttons.
 - The two status cards (education / experience) restyled to the card language, content unchanged.
 - Closing block shrinks to one short line + one primary button.
 
