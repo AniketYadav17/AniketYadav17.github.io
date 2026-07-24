@@ -4,7 +4,6 @@ import { SunIcon, MoonIcon } from '@heroicons/react/24/outline';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Projects from './pages/Projects';
-import Blog from './pages/Blog';
 import Contact from './pages/Contact';
 
 function App() {
@@ -67,7 +66,6 @@ function App() {
             <Routes>
               <Route path="/" element={<Home darkMode={darkMode} />} />
               <Route path="/projects" element={<Projects darkMode={darkMode} />} />
-              <Route path="/blog" element={<Blog darkMode={darkMode} />} />
               <Route path="/contact" element={<Contact darkMode={darkMode} />} />
             </Routes>
           </main>

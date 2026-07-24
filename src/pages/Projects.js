@@ -5,34 +5,36 @@ import { Link } from 'react-router-dom';
 const Projects = ({ darkMode }) => {
   const projects = [
     {
-      title: "Customer Churn Prediction Model",
-      description: "Developed a machine learning model to predict customer churn with 85% accuracy using ensemble methods. Implemented feature engineering, cross-validation, and deployed the model using Flask API.",
-      techStack: ["Python", "Scikit-learn", "Pandas", "Flask", "Docker"],
-      github: "https://github.com/yourusername/churn-prediction",
-      demo: "https://demo-link.com",
-      image: "📊",
+      title: "Sentinel — FCA Compliance Auditor",
+      description: "Agentic compliance auditor for UK fintech marketing. A LangGraph agent decomposes copy into discrete claims, retrieves the FCA Handbook rules each claim may breach, and returns cited verdicts, routing low-confidence cases to human review. Built eval-first: a 199-claim golden dataset verified against the live FCA Handbook API gates every retrieval, prompt, and model change in CI, and the handbook search is published as an MCP server with prompt-injection defences.",
+      techStack: ["Python", "LangGraph", "Hybrid RAG", "Gemini", "MCP", "Evaluation-Gated CI"],
+      github: null,
+      demo: null,
+      note: "Code private for now — walkthrough available on request",
+      image: "🛡️",
       gradient: "from-blue-500 to-cyan-500",
-      stats: { accuracy: "85%", requests: "1000+", time: "80%" }
+      stats: { "Verdict accuracy": "79%", "False-flag rate": "4%", "Recall@5 lift": "+25%" }
     },
     {
-      title: "Real-time Sentiment Analysis API",
-      description: "Built a REST API for real-time sentiment analysis using BERT transformers. Processes 1000+ requests per minute with 92% accuracy. Includes comprehensive testing and CI/CD pipeline.",
-      techStack: ["Python", "Transformers", "FastAPI", "Docker", "AWS"],
-      github: "https://github.com/yourusername/sentiment-analysis",
-      demo: "https://demo-link.com",
-      image: "🤖",
-      gradient: "from-purple-500 to-pink-500",
-      stats: { accuracy: "92%", requests: "1000+", time: "Real-time" }
-    },
-    {
-      title: "Data Pipeline Automation",
-      description: "Designed and implemented an automated ETL pipeline processing 50GB+ daily data using Apache Airflow. Reduced manual processing time by 80% and improved data quality monitoring.",
-      techStack: ["Python", "Apache Airflow", "PostgreSQL", "Docker", "Kubernetes"],
-      github: "https://github.com/yourusername/data-pipeline",
-      demo: "https://demo-link.com",
-      image: "⚡",
+      title: "Neighbourhood Pulse — London Property Intelligence",
+      description: "Gentrification and valuation-gap predictor for London. Ingests 350,000+ planning applications and 500,000+ property sales across all 33 boroughs via a reverse-engineered Elasticsearch API, scores every neighbourhood's valuation gap with an XGBoost model validated by a three-year backtest (flagged-undervalued areas grew +7.3% vs −1.5% for overvalued), and serves grounded, schema-enforced LLM briefs on a live Streamlit map backed by a Dockerised FastAPI service.",
+      techStack: ["Python", "XGBoost", "Gemini API", "FastAPI", "Streamlit", "Docker"],
+      github: "https://github.com/AniketYadav17/Neighbourhood-Pulse",
+      demo: "https://neighbourhood-pulse.streamlit.app",
+      image: "🏙️",
       gradient: "from-green-500 to-emerald-500",
-      stats: { data: "50GB+", efficiency: "80%", monitoring: "Real-time" }
+      stats: { "Records": "850K+", "R² held-out": "0.44", "Backtest spread": "+7.3%" }
+    },
+    {
+      title: "Multi-Task Vision Transformer for Diabetic Retinopathy",
+      description: "MSc dissertation (Distinction) at the University of Surrey. A PyTorch + SegFormer pipeline that jointly performs classification and segmentation on ultra-widefield retinal images, halving model parameters (122M → 61M) while surpassing human grader benchmarks on lesion detection. Custom training loops with Dice + BCE loss handle <0.01% class imbalance, with multi-GPU training and systematic hyperparameter tuning.",
+      techStack: ["PyTorch", "SegFormer", "Vision Transformers", "Multi-GPU Training"],
+      github: null,
+      demo: null,
+      note: "MSc dissertation — thesis available on request",
+      image: "👁️",
+      gradient: "from-purple-500 to-pink-500",
+      stats: { "ROC-AUC": "0.97", "Accuracy": "96%", "Lesion F1": "0.86" }
     }
   ];
 
@@ -60,8 +62,9 @@ const Projects = ({ darkMode }) => {
           <p className={`text-xl max-w-3xl mx-auto ${
             darkMode ? 'text-gray-300' : 'text-gray-600'
           }`}>
-            Showcasing my data science and machine learning projects that demonstrate 
-            technical expertise and problem-solving capabilities
+            Production AI systems built end-to-end — from problem framing and data
+            acquisition through modelling, evaluation, and deployment, with
+            evaluation-gated CI as standard practice
           </p>
         </div>
 
@@ -143,31 +146,47 @@ const Projects = ({ darkMode }) => {
                 </div>
 
                 {/* Project Links */}
-                <div className="flex gap-3">
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`flex-1 flex items-center justify-center gap-2 px-4 py-3 rounded-xl text-sm font-medium transition-all duration-300 ${
+                {(project.github || project.demo) ? (
+                  <div className="flex gap-3">
+                    {project.github && (
+                      <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={`flex-1 flex items-center justify-center gap-2 px-4 py-3 rounded-xl text-sm font-medium transition-all duration-300 ${
+                          darkMode
+                            ? 'bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white border border-white/20'
+                            : 'bg-gray-100 text-gray-700 hover:bg-gray-200 border border-gray-200'
+                        }`}
+                      >
+                        <CodeBracketIcon className="h-4 w-4" />
+                        Code
+                      </a>
+                    )}
+
+                    {project.demo && (
+                      <a
+                        href={project.demo}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={`flex-1 flex items-center justify-center gap-2 px-4 py-3 rounded-xl text-sm font-medium transition-all duration-300 bg-gradient-to-r ${project.gradient} text-white hover:shadow-lg`}
+                      >
+                        <ArrowTopRightOnSquareIcon className="h-4 w-4" />
+                        Live Demo
+                      </a>
+                    )}
+                  </div>
+                ) : (
+                  project.note && (
+                    <div className={`text-center text-xs italic px-4 py-3 rounded-xl border ${
                       darkMode
-                        ? 'bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white border border-white/20'
-                        : 'bg-gray-100 text-gray-700 hover:bg-gray-200 border border-gray-200'
-                    }`}
-                  >
-                    <CodeBracketIcon className="h-4 w-4" />
-                    Code
-                  </a>
-                  
-                  <a
-                    href={project.demo}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`flex-1 flex items-center justify-center gap-2 px-4 py-3 rounded-xl text-sm font-medium transition-all duration-300 bg-gradient-to-r ${project.gradient} text-white hover:shadow-lg`}
-                  >
-                    <ArrowTopRightOnSquareIcon className="h-4 w-4" />
-                    Demo
-                  </a>
-                </div>
+                        ? 'text-gray-400 border-white/10 bg-white/5'
+                        : 'text-gray-500 border-gray-200 bg-gray-50'
+                    }`}>
+                      {project.note}
+                    </div>
+                  )
+                )}
               </div>
             </div>
           ))}

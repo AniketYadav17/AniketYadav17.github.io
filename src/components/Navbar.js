@@ -18,7 +18,6 @@ const Navbar = ({ darkMode }) => {
   const navigation = [
     { name: 'Home', href: '/' },
     { name: 'Projects', href: '/projects' },
-    { name: 'Blog', href: '/blog' },
     { name: 'Contact', href: '/contact' },
   ];
 
@@ -50,7 +49,7 @@ const Navbar = ({ darkMode }) => {
               <div className={`text-sm transition-colors duration-300 ${
                 darkMode ? 'text-gray-400' : 'text-gray-600'
               }`}>
-                Data Scientist
+                AI Engineer
               </div>
             </div>
           </Link>

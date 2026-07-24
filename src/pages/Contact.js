@@ -56,8 +56,8 @@ const Contact = ({ darkMode }) => {
           <p className={`text-xl max-w-3xl mx-auto ${
             darkMode ? 'text-gray-300' : 'text-gray-600'
           }`}>
-            I'm always interested in new opportunities, collaborations, and interesting 
-            conversations about data science and artificial intelligence.
+            I'm always interested in new opportunities, collaborations, and interesting
+            conversations about agentic AI, RAG systems, and LLM evaluation.
           </p>
         </div>
 
@@ -130,9 +130,10 @@ const Contact = ({ darkMode }) => {
             <p className={`text-xl max-w-3xl mx-auto ${
               darkMode ? 'text-gray-300' : 'text-gray-600'
             }`}>
-              I'm currently pursuing my MSc in Artificial Intelligence and actively seeking 
-              data science opportunities. Whether you have a project in mind, want to discuss 
-              potential collaborations, or just want to connect, I'd love to hear from you!
+              I hold an MSc in Artificial Intelligence (Distinction) from the University of
+              Surrey and I'm actively seeking AI engineering opportunities. Whether you have
+              a project in mind, want to discuss potential collaborations, or just want to
+              connect, I'd love to hear from you!
             </p>
           </div>
           
@@ -153,8 +154,8 @@ const Contact = ({ darkMode }) => {
               <div className={`space-y-2 ${
                 darkMode ? 'text-gray-300' : 'text-gray-600'
               }`}>
-                <p className="font-medium">MSc in Artificial Intelligence</p>
-                <p>University of Sutu</p>
+                <p className="font-medium">MSc in Artificial Intelligence — Distinction</p>
+                <p>University of Surrey (2024–2025)</p>
                 <p className="text-blue-500 font-semibold">Available for opportunities</p>
               </div>
             </div>
@@ -175,9 +176,9 @@ const Contact = ({ darkMode }) => {
               <div className={`space-y-2 ${
                 darkMode ? 'text-gray-300' : 'text-gray-600'
               }`}>
-                <p className="font-medium">2.5 years as Software Engineer</p>
-                <p>Accenture</p>
-                <p className="text-purple-500 font-semibold">Data Science & ML focus</p>
+                <p className="font-medium">2+ years shipping production AI systems</p>
+                <p>Independent AI Engineer · Ex-Accenture</p>
+                <p className="text-purple-500 font-semibold">Agentic AI · RAG · LLM Evaluation</p>
               </div>
             </div>
           </div>

@@ -59,7 +59,7 @@ const Home = ({ darkMode }) => {
               <h2 className={`text-xl md:text-3xl font-medium ${
                 darkMode ? 'text-gray-300' : 'text-gray-600'
               }`}>
-                Data Scientist & AI Enthusiast
+                AI Engineer · Agentic AI · RAG · LLM Evaluation
               </h2>
             </div>
           </div>
@@ -69,15 +69,17 @@ const Home = ({ darkMode }) => {
             <p className={`text-xl md:text-2xl leading-relaxed ${
               darkMode ? 'text-gray-300' : 'text-gray-700'
             }`}>
-              I'm currently pursuing an MSc in Artificial Intelligence at the University of Surrey, 
-              with 2.5 years of experience as a software engineer at Accenture.
+              AI Engineer with 2+ years shipping production AI systems in Python.
+              MSc in Artificial Intelligence (Distinction) from the University of Surrey,
+              previously Machine Learning Engineer at Accenture.
             </p>
-            
+
             <p className={`text-lg md:text-xl leading-relaxed ${
               darkMode ? 'text-gray-400' : 'text-gray-600'
             }`}>
-              Passionate about leveraging data science and machine learning to solve complex problems 
-              and drive innovation.
+              I build agentic LLM workflows with LangGraph, retrieval-augmented pipelines
+              over enterprise data, and the evaluation harnesses that prove these systems
+              can be trusted in production.
             </p>
           </div>
 
